@@ -342,6 +342,13 @@ export default class VirtualSourceBuffer extends videojs.EventTarget {
   }
 
   /**
+   * Clear buffered audio
+   */
+  clearBufferedAudio() {
+    this.transmuxer_.postMessage({action: 'clearBufferedAudio'});
+  }
+
+  /**
    * Emulate the native mediasource function and remove parts
    * of the buffer from any of our internal buffers that exist
    *
