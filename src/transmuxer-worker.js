@@ -120,6 +120,15 @@ class MessageHandlers {
   flush(data) {
     this.transmuxer.flush();
   }
+
+  /**
+   * Forces the pipeline clear current buffered audio
+   *
+   * @param {Object} data event data, not really used
+   */
+  clearBufferedAudio(data) {
+    this.transmuxer.clearBufferedAudio();
+  }
 }
 
 /**
